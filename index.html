@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[FG NETWORK]</title>
+    <link rel="icon" type="image/png" href="MLOGO.png">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.bunny.net/css?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <nav class="desktop_navbar">
+      <a href="#"><img class="desktop_navbar_logo_img" src="MLOGO.png" alt="logo"></a>
+      <a href="https://minecraft-mp.com/server-s340758" class="desktop_navbar_link">Vote</a>
+      <a href="#discord" class="desktop_navbar_link scroll">Community</a>
+      <a href="#about" class="desktop_navbar_link scroll">Staff</a>
+      <div class="desktop_navbar_link2_div">
+          <a href="#join" class="desktop_navbar_link2 scroll">Join Us!</a>
+      </div>
+    </nav>
+    <div class="mobile_navbar">
+      <a href="#" class="mobile_navbar_logo_img_a"><img class="mobile_navbar_logo_img" src="MLOGO.png" alt="logo"></a>
+      <div id="mobile_navbar_links">
+          <a class="mobile_navbar_link" onclick="mobile_navbar_link_hider()" href="https://minecraft-mp.com/server-s340758">Vote</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#discord">Community</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#about">Staff</a>
+          <a class="mobile_navbar_link scroll" onclick="mobile_navbar_link_hider()" href="#join">Join Us</a>
+        </div>
+        <div class="icon" onclick="mobile_navbar_link_hider()">
+            <i class="fa fa-bars"></i>
+        </div>
+        <script>
+            function mobile_navbar_link_hider() {
+            var x = document.getElementById("mobile_navbar_links");
+            if (x.style.display === "flex") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "flex";
+            }
+            } 
+        </script>
+    </div>
+    <div class="mainflex">
+      <div class="main1">
+        <a class="main1_logo_a" href="#">
+          <img class="main1_logo" src="DLOGO.png" alt="FG NETWORK">
+        </a>
+        <div class="main1_description">
+          <a>FG NETWORK S5,<br>BEST</a>
+          <a class="main1_actcent">PUBLIC SMP LIFESTEAL / SURVIVAL ETC</a><a>.</a>
+        </div>
+        <div class="main1_ipcopier_div">
+          <button class="main1_ipcopier" onclick="copyText()" type="button">
+            <span class="main1_ipcopier_text1">play.fgnetworks5.online</span>
+            <br>
+            <span class="main1_ipcopier_text2">Click to copy</span>
+          </button>
+          <script>
+            function copyText() {
+                navigator.clipboard.writeText
+            ("play.fgnetworks5.online");
+                }
+            $(document).ready(function() {
+            $('.main1_ipcopier').click(function() {
+                var popup = $('<div>', { class: 'main1_popup' })
+                .append($('<h3 class="copy_confirm">').text('Copied IP to clipboard'))
+                $(this).after(popup);
+                setTimeout(function() {
+                popup.remove();
+                }, 1000);
+            });
+            });
+        </script>
+        </div>
+        <a href="#more" class="scroll">
+          <img alt="downarrow" class="main1_downarrow" src="arrow.png">
+        </a>
+        <script>
+          const scrollLinks = document.querySelectorAll('.scroll');
+          scrollLinks.forEach(function(link) {
+            link.addEventListener('click', function(event) {
+              event.preventDefault();
+              const target = document.querySelector(link.getAttribute('href'));
+              const offsetTop = target.offsetTop;
+              window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+              });
+            });
+          });
+        </script>
+      </div>
+      <div id="more"></div>
+      <div class="main2">
+        <a class="headline">What we have</a>
+        <div class="main2_features_div">
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="LIFSTL.png">
+            <a class="main2_feature_headline">LifeSteal</a>
+            <a class="main2_feature_text">Minecraft Lifesteal is a unique game mode or plugin where players can steal health from others</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="ITEM.png">
+            <a class="main2_feature_headline">Custom Armors And Tools</a>
+            <a class="main2_feature_text">Enhance your experience , Stop using those boring old tools and try something new</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="CRATES.png">
+            <a class="main2_feature_headline">Custom Crates</a>
+            <a class="main2_feature_text">Try out your luck to get some godly items!</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="RANK.png">
+            <a class="main2_feature_headline">Rank System</a>
+            <a class="main2_feature_text">Acquire more power to conquer the Minecraft world with better ranks</a>
+          </div>
+          <div class="main2_feature">
+            <img class="main2_feature_img" alt="Feature Image" src="ENCHANT.jpg">
+            <a class="main2_feature_headline">Custom Enchants</a>
+            <a class="main2_feature_text">Bored with old enchants? We got crazy and destructible enchants! Gear up and feel the power of destruction</a>
+          </div>
+        </div>
+      </div>
+      <div id="discord"></div>
+      <div class="main4">
+        <a class="headline">Join the Discord</a>
+        <div class="main4_dc_div">
+          <iframe class="main4_dc_widget" src="MLOGO.png" width="350" height="369" title="discord" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+          <div class="main4_dc_description_div">
+            <a class="main4_dc_description_title">Let's talk!</a>
+            <a class="main4_dc_description"> ・Meet other players <br> ・Ask questions <br> ・Get notified about updates <br> ・Give feedback  <br><br> &amp; more </a>
+            <a href="https://discord.gg/cVk3FcEXVS" class="main4_dc_button_a">
+              <div class="main4_dc_button">Join</div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div id="about"></div>
+      <div class="main5">
+        <a class="headline">Who we are</a>
+        <div class="main5_admin_div">
+          <div class="main5_admins_div main5_admins_dev_type2">
+            <img class="main5_admins_img" alt="admin member img" src="FG.png">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_owner">[Owner]</a>
+              <a class="main5_admins_description_title" href="">TEAMFGYTLEADER</a>
+              <a class="main5_admins_description"><font color="red">[Owner]</font><br>Founder and the developer of the server and has a YouTube channel named as TEAMFGYT2.O <br><a href ="https://www.youtube.com/@teamfgyt2.o" Title="A YouTube Link">Click to visit the YouTube channel </a></a>
+            </div>
+          </div>
+          <div class="main5_admins_div main5_admins_dev_type1">
+            <img class="main5_admins_img" alt="admin member img" src="GMR LOGO.jpg">
+            <div class="main5_admins_description_div">
+              <a class="main5_admins_description_rank main5_admins_description_rank_admin">[Admin]</a>
+              <a class="main5_admins_description_title" href="">GMR PLAYS</a>
+              <a class="main5_admins_description"><font color="#FF7722">[Admin]</font><br>Played a major role in the development of Minecraft server <br><a href ="https://www.youtube.com/@gmrplays" Title="A YouTube Link">Click to visit the YouTube channel </a></a>
+            </div>
+          </div>
+        </div>
+        <div class="main5_supporter_div">
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="SANU.jpg">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Head Staff]</a>
+              <a class="main5_supporters_description_title">Sanidhya</a>
+              <a class="main5_supporters_description"><font color="#FFB6C1">[H.Staff]</font><br>Helped in the development of Fg Network website and will be monitoring the people in the server for suspicious activity</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="SUJIT.png">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter"><font style= "rockwell" color="green"> <b>[Donator]</b></font></a>
+              <a class="main5_supporters_description_title"><font style= "rockwell" color=""> <b>Sujit</b></font></a>
+              <a class="main5_supporters_description"><font color="green">[Donator / Developer]</font><br>Donated a good value for our server, really appreciate it sujit bhai</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="SL.jpg">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Staff]</a>
+              <a class="main5_supporters_description_title">SLshipYT</a>
+              <a class="main5_supporters_description"><font color="#9B870C">[Staff]</font><br>A very important staff member who helped to test the server and find out bugs and glitches and will be sub monitoring players</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="ILOVER.png">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter"><font style= "rockwell" color="green"> <b>[Donator]</b></font></a>
+              <a class="main5_supporters_description_title"><font style= "rockwell" color=""> <b>ILover</b></font></a>
+              <a class="main5_supporters_description"><font color="green">[Donator]</font><br>First donater of the server, he helped us to start our server from the beginning. Thank you so much for your support</a>
+            </div>
+          </div>
+          <div class="main5_supporters_div">
+            <img class="main5_supporters_img" alt="supporters member img" src="AG.jpg">
+            <div class="main5_supporters_description_div">
+              <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Staff]</a>
+              <a class="main5_supporters_description_title">Ayush</a>
+              <a class="main5_supporters_description"><font color="#9B870C">[Staff]</font><br>New Staff Member</a>
+        </div>
+        </div>
+        <div class="main5_supporters_div">
+          <img class="main5_supporters_img" alt="supporters member img" src="COBRA.png">
+          <div class="main5_supporters_description_div">
+            <a class="main5_supporters_description_rank main5_supporters_description_rank_supporter">[Staff]</a>
+            <a class="main5_supporters_description_title">Cobra</a>
+            <a class="main5_supporters_description"><font color="#9B870C">[Staff]</font><br>New Staff Member</a>
+        </div>
+        </div>
+        </div>
+      </div>
+      <div id="join"></div>
+      <div class="main3">
+        <a class="headline">How to join</a>
+        <div class="main3_join_div_div">
+          <div class="main3_join_div">
+            <a class="main3_join_title">Java</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Version:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>play.fgnetworks5.online</a>
+                <a>1.8 / 1.21.4</a>
+              </div>
+            </div>
+          </div>
+          <div class="main3_join_div">
+            <a class="main3_join_title">Bedrock</a>
+            <div class="main3_join_content_div">
+              <div class="main3_join_categories">
+                <a>IP:</a>
+                <a>Port:</a>
+              </div>
+              <div class="main3_join_values">
+                <a>play.fgnetworks5.online</a>
+                <a>25607</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="copyright_div">
+      <a href="" class="copyright"></a>
+      <p>Date:11-02-2025 | Created By Fgyt®</p>
+    </footer>
+  </body>
+</html>
